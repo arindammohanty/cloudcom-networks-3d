@@ -15,7 +15,7 @@ export default function Navbar() {
             <div className="bg-slate-900 text-slate-300 text-[11px] py-2 px-6 hidden md:block">
                 <div className="container mx-auto max-w-7xl flex justify-between items-center">
                     <div className="flex space-x-6 font-medium">
-                        <span className="flex items-center"><i className="fa-solid fa-phone text-slate-500 mr-2"></i> +91 00000 00000</span>
+                        <span className="flex items-center"><i className="fa-solid fa-phone text-slate-500 mr-2"></i> +91 7609832555</span>
                         <span className="flex items-center"><i className="fa-solid fa-envelope text-slate-500 mr-2"></i> info@cloudcomnet.com</span>
                         <span className="flex items-center"><i className="fa-solid fa-location-dot text-slate-500 mr-2"></i> Bhubaneswar, Odisha, India</span>
                     </div>
@@ -56,6 +56,7 @@ export default function Navbar() {
                         
                         <Link href="/partners" className={`nav-link h-full flex items-center text-sm font-semibold transition-colors ${isActive('/partners') ? 'text-primary' : 'text-slate-600 hover:text-primary'}`}>Partners</Link>
                         <Link href="/careers" className={`nav-link h-full flex items-center text-sm font-semibold transition-colors ${isActive('/careers') ? 'text-primary' : 'text-slate-600 hover:text-primary'}`}>Careers</Link>
+                        <Link href="/support" className={`nav-link h-full flex items-center text-sm font-semibold transition-colors ${isActive('/support') ? 'text-primary' : 'text-slate-600 hover:text-primary'}`}>Support</Link>
                         <Link href="/contact" className={`nav-link h-full flex items-center text-sm font-semibold transition-colors ${isActive('/contact') ? 'text-primary' : 'text-slate-600 hover:text-primary'}`}>Contact</Link>
                     </div>
 
@@ -75,6 +76,7 @@ export default function Navbar() {
                             <Link href="/resources" onClick={() => setIsMobileMenuOpen(false)} className={`mobile-nav-link block px-3 py-3 text-base font-medium border-b border-slate-100 ${isActive('/resources') ? 'text-primary' : 'text-slate-600 hover:text-primary'}`}>Resources</Link>
                             <Link href="/partners" onClick={() => setIsMobileMenuOpen(false)} className={`mobile-nav-link block px-3 py-3 text-base font-medium border-b border-slate-100 ${isActive('/partners') ? 'text-primary' : 'text-slate-600 hover:text-primary'}`}>Partners</Link>
                             <Link href="/careers" onClick={() => setIsMobileMenuOpen(false)} className={`mobile-nav-link block px-3 py-3 text-base font-medium border-b border-slate-100 ${isActive('/careers') ? 'text-primary' : 'text-slate-600 hover:text-primary'}`}>Careers</Link>
+                            <Link href="/support" onClick={() => setIsMobileMenuOpen(false)} className={`mobile-nav-link block px-3 py-3 text-base font-medium border-b border-slate-100 ${isActive('/support') ? 'text-primary' : 'text-slate-600 hover:text-primary'}`}>Support</Link>
                             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className={`mobile-nav-link block px-3 py-3 text-base font-medium border-b border-slate-100 ${isActive('/contact') ? 'text-primary' : 'text-slate-600 hover:text-primary'}`}>Contact</Link>
                             <Link href="/contact?interest=General%20Inquiry%20(Mobile%20Nav)" onClick={() => setIsMobileMenuOpen(false)} className="block mt-4 text-center bg-primary text-white px-6 py-3 rounded-md font-semibold text-sm transition-colors">Get in Touch</Link>
                         </div>

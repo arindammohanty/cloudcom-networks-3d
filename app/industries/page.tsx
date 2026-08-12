@@ -15,13 +15,14 @@ export default function IndustriesPage() {
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                         {[
-                            { icon: "fa-heart-pulse", title: "Healthcare", desc: "Secure patient data platforms, compliance (HIPAA), and operational efficiency." },
-                            { icon: "fa-building-columns", title: "Finance & Banking", desc: "Fraud detection, regulatory compliance, and secure cloud banking." },
-                            { icon: "fa-industry", title: "Manufacturing", desc: "IoT integration, predictive maintenance, and supply chain visibility." },
-                            { icon: "fa-store", title: "Retail & E-commerce", desc: "Scalable infrastructure for peak seasons and personalized customer experiences." },
-                            { icon: "fa-graduation-cap", title: "Education", desc: "Secure learning platforms and remote collaboration tools." },
-                            { icon: "fa-user-tie", title: "Professional Services", desc: "Client data protection, project management automation, and knowledge systems." },
-                            { icon: "fa-truck-fast", title: "Logistics & Transportation", desc: "Real-time tracking, route optimization, and fleet management." }
+                            { icon: "fa-heart-pulse", title: "Healthcare", desc: "Secure patient data platforms, compliance (HIPAA), and operational efficiency.", slug: "healthcare" },
+                            { icon: "fa-building-columns", title: "Finance & Banking", desc: "Fraud detection, regulatory compliance, and secure cloud banking.", slug: "banking" },
+                            { icon: "fa-industry", title: "Manufacturing", desc: "IoT integration, predictive maintenance, and supply chain visibility.", slug: "manufacturing" },
+                            { icon: "fa-store", title: "Retail & E-commerce", desc: "Scalable infrastructure for peak seasons and personalized customer experiences.", slug: "retail" },
+                            { icon: "fa-graduation-cap", title: "Education", desc: "Secure learning platforms and remote collaboration tools.", slug: "education" },
+                            { icon: "fa-user-tie", title: "Professional Services", desc: "Client data protection, project management automation, and knowledge systems.", slug: "professional-services" },
+                            { icon: "fa-truck-fast", title: "Logistics & Transportation", desc: "Real-time tracking, route optimization, and fleet management.", slug: "logistics" },
+                            { icon: "fa-landmark", title: "Government & Public Sector", desc: "Secure digital infrastructure for public administration and citizen services.", slug: "government" }
                         ].map((item, idx) => (
                             <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-card transition-shadow text-center flex flex-col items-center group">
                                 <div className="w-16 h-16 rounded-full border border-slate-200 bg-slate-50 flex items-center justify-center text-2xl text-slate-600 group-hover:text-primary group-hover:border-primary transition-colors mb-4">
@@ -29,7 +30,7 @@ export default function IndustriesPage() {
                                 </div>
                                 <h3 className="font-bold text-slate-900 text-sm mb-2">{item.title}</h3>
                                 <p className="text-[11px] text-slate-500 mb-4 flex-grow">{item.desc}</p>
-                                <Link href={`/contact?interest=${encodeURIComponent('Industry Inquiry: ' + item.title)}`} className="text-primary text-[10px] font-bold uppercase tracking-wider">Learn More &rarr;</Link>
+                                <Link href={`/industries/${item.slug}`} className="text-primary text-[10px] font-bold uppercase tracking-wider">Learn More &rarr;</Link>
                             </div>
                         ))}
                     </div>

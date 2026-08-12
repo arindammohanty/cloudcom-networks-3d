@@ -15,24 +15,28 @@ export default function SitemapPage() {
             icon: "fa-solid fa-building",
             links: [
                 { name: "Home", url: "/" },
-                { name: "About Us", url: "/about" },
-                { name: "Contact Us", url: "/contact" },
-                { name: "Industries", url: "/industries" },
+                { name: "Company", url: "/company" },
                 { name: "Solutions", url: "/solutions" },
+                { name: "Industries", url: "/industries" },
+                { name: "Resources", url: "/resources" },
+                { name: "Partners", url: "/partners" },
+                { name: "Careers", url: "/careers" },
+                { name: "Contact", url: "/contact" },
             ]
         },
         {
-            title: "Services",
+            title: "Solutions",
             icon: "fa-solid fa-server",
             links: [
-                { name: "All Services Overview", url: "/services" },
-                { name: "AI Automation", url: "/services/ai-automation" },
-                { name: "Cloud Infrastructure", url: "/services/cloud-infrastructure" },
-                { name: "Cloud Security", url: "/services/cloud-security" },
-                { name: "Enterprise Email", url: "/services/enterprise-email" },
-                { name: "Managed Services", url: "/services/managed-services" },
-                { name: "Network Services", url: "/services/network-services" },
-                { name: "UCaaS", url: "/services/ucaas" },
+                { name: "All Solutions Overview", url: "/solutions" },
+                { name: "AI & Automation", url: "/solutions/ai-automation" },
+                { name: "Enterprise Cloud", url: "/solutions/cloud" },
+                { name: "Cybersecurity", url: "/solutions/cybersecurity" },
+                { name: "Enterprise Communications", url: "/solutions/communications" },
+                { name: "Managed Operations", url: "/solutions/managed-operations" },
+                { name: "Enterprise Applications", url: "/solutions/applications" },
+                { name: "IoT & Edge", url: "/solutions/iot-edge" },
+                { name: "Business Operations", url: "/solutions/bpo" },
             ]
         },
         {
@@ -53,7 +57,7 @@ export default function SitemapPage() {
             icon: "fa-solid fa-headset",
             links: [
                 { name: "Support Portal", url: "/support" },
-                { name: "Downloads", url: "/support/downloads" },
+
                 { name: "Help Center", url: "/support/help-center" },
                 { name: "Knowledge Base", url: "/support/knowledge-base" },
                 { name: "My Tickets", url: "/support/my-tickets" },

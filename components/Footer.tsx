@@ -70,24 +70,24 @@ export default function Footer() {
                             <h4 className="text-white font-bold text-sm mb-6 tracking-wide">Resources</h4>
                             <ul className="space-y-3 text-xs font-medium text-slate-400">
                                 <li><Link href="/resources/blog" className="hover:text-white transition-colors">Blog</Link></li>
-                                <li><Link href="/resources/white-papers" className="hover:text-white transition-colors">White Papers</Link></li>
-                                <li><Link href="/resources/solution-briefs" className="hover:text-white transition-colors">Solution Briefs</Link></li>
-                                <li><Link href="/resources/brochures" className="hover:text-white transition-colors">Brochures</Link></li>
-                                <li><Link href="/resources/datasheets" className="hover:text-white transition-colors">Datasheets</Link></li>
-                                <li><Link href="/resources/faqs" className="hover:text-white transition-colors">FAQs</Link></li>
-                                <li><Link href="/resources/downloads" className="hover:text-white transition-colors">Downloads</Link></li>
+                                <li><Link href="/resources/whitepapers" className="hover:text-white transition-colors">White Papers</Link></li>
+                                <li><Link href="/resources/casestudies" className="hover:text-white transition-colors">Solution Briefs</Link></li>
+                                <li><Link href="/resources/guides" className="hover:text-white transition-colors">Brochures</Link></li>
+                                <li><Link href="/resources/guides" className="hover:text-white transition-colors">Datasheets</Link></li>
+                                <li><Link href="/support/knowledge-base" className="hover:text-white transition-colors">FAQs</Link></li>
+
                             </ul>
                         </div>
 
                         <div>
                             <h4 className="text-white font-bold text-sm mb-6 tracking-wide">Company</h4>
                             <ul className="space-y-3 text-xs font-medium text-slate-400 mb-6">
-                                <li><Link href="/company/about" className="hover:text-white transition-colors">About CloudCom</Link></li>
-                                <li><Link href="/company/vision-mission" className="hover:text-white transition-colors">Vision & Mission</Link></li>
-                                <li><Link href="/company/leadership" className="hover:text-white transition-colors">Leadership</Link></li>
-                                <li><Link href="/company/why-cloudcom" className="hover:text-white transition-colors">Why CloudCom</Link></li>
-                                <li><Link href="/company/core-values" className="hover:text-white transition-colors">Core Values</Link></li>
-                                <li><Link href="/company/our-approach" className="hover:text-white transition-colors">Our Approach</Link></li>
+                                <li><Link href="/company" className="hover:text-white transition-colors">About CloudCom</Link></li>
+                                <li><Link href="/company#vision" className="hover:text-white transition-colors">Vision & Mission</Link></li>
+                                <li><Link href="/company" className="hover:text-white transition-colors">Leadership</Link></li>
+                                <li><Link href="/company" className="hover:text-white transition-colors">Why CloudCom</Link></li>
+                                <li><Link href="/company#values" className="hover:text-white transition-colors">Core Values</Link></li>
+                                <li><Link href="/company" className="hover:text-white transition-colors">Our Approach</Link></li>
                             </ul>
                         </div>
                     </div>

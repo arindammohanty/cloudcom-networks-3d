@@ -66,6 +66,13 @@ const solutionsData: Record<string, any> = {
     description: "Knowledge Process Outsourcing running on our secure infrastructure.",
     features: ["Finance & Accounting", "HR Compliance", "Customer Support Helpdesk"],
     details: "Scale your operations efficiently with our specialized BPO and KPO services. Backed by our secure infrastructure, our domain experts seamlessly integrate with your organization to deliver high-quality, compliant process management."
+  },
+  "iot-edge": {
+    title: "IoT & Edge Computing",
+    icon: <Cpu className="w-16 h-16 text-cloud-blue" />,
+    description: "Intelligent Edge and IoT platforms for real-time decision making.",
+    features: ["Edge Analytics", "IoT Device Management", "Real-time Monitoring", "Industrial IoT"],
+    details: "Connect and manage your dispersed assets with our secure IoT and Edge platforms. Process data closer to the source to reduce latency and bandwidth usage, while ensuring enterprise-grade security across your entire connected ecosystem."
   }
 };
 

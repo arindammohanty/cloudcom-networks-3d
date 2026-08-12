@@ -60,12 +60,7 @@ export default function SupportPortalPage() {
                             <p className="text-[10px] text-slate-500 mb-3">Find answers to questions.</p>
                             <span className="text-primary text-xs font-bold">Browse Articles &rarr;</span>
                         </Link>
-                        <Link href="/support/downloads" className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-card transition-shadow cursor-pointer block">
-                            <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center text-xl mb-4"><i className="fa-solid fa-download"></i></div>
-                            <h3 className="font-bold text-slate-900 text-sm mb-1">Downloads</h3>
-                            <p className="text-[10px] text-slate-500 mb-3">Get software and updates.</p>
-                            <span className="text-primary text-xs font-bold">View Downloads &rarr;</span>
-                        </Link>
+
                     </div>
                 </div>
             </section>

@@ -74,9 +74,9 @@ export default function HomePage() {
                             { icon: "fa-comments", title: "Enterprise Communications", desc: "VoIP, Hosted PBX, SIP Trunking, Video.", link: "/solutions/communications" },
                             { icon: "fa-cubes", title: "Enterprise Applications", desc: "SAP, Salesforce, ERP, CRM, Integration.", link: "/solutions/applications" },
                             { icon: "fa-server", title: "Managed Operations", desc: "System administration, NOC, automation.", link: "/solutions/managed-operations" },
-                            { icon: "fa-shield-halved", title: "Cybersecurity", desc: "SOC, threat detection, Zero Trust.", link: "/solutions/security" },
+                            { icon: "fa-shield-halved", title: "Cybersecurity", desc: "SOC, threat detection, Zero Trust.", link: "/solutions/cybersecurity" },
                             { icon: "fa-network-wired", title: "IoT & Edge", desc: "Intelligent Edge, IoT platforms.", link: "/solutions/iot-edge" },
-                            { icon: "fa-briefcase", title: "Business Operations", desc: "BPO/KPO, workflow automation.", link: "/solutions/business-operations" }
+                            { icon: "fa-briefcase", title: "Business Operations", desc: "BPO/KPO, workflow automation.", link: "/solutions/bpo" }
                         ].map((item, idx) => (
                             <AnimatedSection key={idx} delay={idx * 0.1} direction="up" className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)]">
                                 <Link href={item.link} className="block h-full group">
@@ -108,7 +108,7 @@ export default function HomePage() {
                                     <div className="absolute -top-6 -left-6 text-6xl text-slate-200 opacity-50"><i className="fa-solid fa-quote-left"></i></div>
                                     <h2 className="text-3xl font-bold text-slate-900 mb-6">About CloudCom</h2>
                                     <p className="text-base text-slate-600 mb-8 leading-relaxed">CloudCom is an Enterprise Digital Infrastructure & Technology Operations company helping organizations modernize, secure, and operate mission-critical digital platforms.</p>
-                                    <Link href="/about" className="bg-primary hover:bg-primaryHover text-white px-6 py-3 rounded-md font-bold transition-all shadow-md inline-flex items-center">
+                                    <Link href="/company" className="bg-primary hover:bg-primaryHover text-white px-6 py-3 rounded-md font-bold transition-all shadow-md inline-flex items-center">
                                         More About Us <i className="fa-solid fa-arrow-right ml-2"></i>
                                     </Link>
                                 </div>
@@ -150,7 +150,7 @@ export default function HomePage() {
                             <h3 className="text-sm font-bold text-slate-400 mb-8 uppercase tracking-widest">Trusted Technology Ecosystem</h3>
                             <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 opacity-70">
                                 {["AWS", "Azure", "Private Cloud", "Linux", "Kubernetes", "SAP", "Salesforce", "PostgreSQL", "Docker", "AI", "IoT", "Security"].map((tech, i) => (
-                                    <span key={i} className="text-xl font-extrabold text-slate-400 hover:text-slate-900 transition-colors cursor-default">{tech}</span>
+                                    <span key={i} className="text-xl font-extrabold text-slate-400 hover:text-primary transition-colors cursor-default">{tech}</span>
                                 ))}
                             </div>
                         </AnimatedSection>
@@ -169,14 +169,14 @@ export default function HomePage() {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {[
-                            { icon: "fa-building-columns", title: "Government", slug: "government" },
                             { icon: "fa-heart-pulse", title: "Healthcare", slug: "healthcare" },
-                            { icon: "fa-graduation-cap", title: "Education", slug: "education" },
-                            { icon: "fa-chart-line", title: "BFSI", slug: "banking" },
+                            { icon: "fa-building-columns", title: "Finance & Banking", slug: "banking" },
                             { icon: "fa-industry", title: "Manufacturing", slug: "manufacturing" },
-                            { icon: "fa-store", title: "Retail", slug: "retail" },
-                            { icon: "fa-laptop-code", title: "IT", slug: "it" },
-                            { icon: "fa-building", title: "SMEs", slug: "sme" }
+                            { icon: "fa-store", title: "Retail & E-commerce", slug: "retail" },
+                            { icon: "fa-graduation-cap", title: "Education", slug: "education" },
+                            { icon: "fa-user-tie", title: "Professional Services", slug: "professional-services" },
+                            { icon: "fa-truck-fast", title: "Logistics & Transportation", slug: "logistics" },
+                            { icon: "fa-landmark", title: "Government & Public Sector", slug: "government" }
                         ].map((item, idx) => (
                             <AnimatedSection key={idx} delay={idx * 0.05} direction="up">
                                 <Link href={`/industries/${item.slug}`} className="flex flex-col items-center justify-center p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-primary hover:border-primary transition-all group cursor-pointer h-full backdrop-blur-sm">

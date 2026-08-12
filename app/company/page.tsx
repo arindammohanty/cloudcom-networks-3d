@@ -24,7 +24,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-white">
+      <section id="vision" className="py-24 bg-white">
         <Container>
           <div className="grid md:grid-cols-2 gap-12">
             <AnimatedSection direction="right">
@@ -52,7 +52,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-accent-gray">
+      <section id="values" className="py-24 bg-accent-gray">
         <Container>
           <div className="text-center mb-16">
             <AnimatedSection>

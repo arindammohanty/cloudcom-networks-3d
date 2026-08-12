@@ -168,7 +168,7 @@ export default function ContactPage() {
                                         <div className="w-10 h-10 rounded-full bg-blue-50 text-primary flex items-center justify-center text-lg mr-4 flex-shrink-0"><i className="fa-solid fa-phone"></i></div>
                                         <div>
                                             <h4 className="font-bold text-slate-900 text-sm">Phone</h4>
-                                            <p className="text-slate-600 text-xs font-semibold mt-1">+91 00000 00000</p>
+                                            <p className="text-slate-600 text-xs font-semibold mt-1">+91 7609832555</p>
                                             <p className="text-slate-400 text-[10px] mt-1">Mon - Sat: 9:00 AM - 6:00 PM</p>
                                         </div>
                                     </div>
