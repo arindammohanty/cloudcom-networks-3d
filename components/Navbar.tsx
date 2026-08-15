@@ -12,20 +12,6 @@ export default function Navbar() {
 
     return (
         <>
-            <div className={`bg-slate-900 text-slate-300 text-[11px] py-2 px-6 ${pathname === '/' ? 'hidden' : 'hidden md:block'}`}>
-                <div className="container mx-auto max-w-7xl flex justify-between items-center">
-                    <div className="flex space-x-6 font-medium">
-                        <span className="flex items-center"><i className="fa-solid fa-phone text-slate-500 mr-2"></i> +91 7609832555</span>
-                        <span className="flex items-center"><i className="fa-solid fa-envelope text-slate-500 mr-2"></i> info@cloudcomnet.com</span>
-                        <span className="flex items-center"><i className="fa-solid fa-location-dot text-slate-500 mr-2"></i> Bhubaneswar, Odisha, India</span>
-                    </div>
-                    <div className="flex space-x-4">
-                        <Link href="https://linkedin.com" target="_blank" className="hover:text-white transition-colors"><i className="fa-brands fa-linkedin-in"></i></Link>
-                        <Link href="https://twitter.com" target="_blank" className="hover:text-white transition-colors"><i className="fa-brands fa-twitter"></i></Link>
-                        <Link href="https://youtube.com" target="_blank" className="hover:text-white transition-colors"><i className="fa-brands fa-youtube"></i></Link>
-                    </div>
-                </div>
-            </div>
 
             <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
                 <div className="container mx-auto px-6 max-w-7xl h-20 flex items-center justify-between">
