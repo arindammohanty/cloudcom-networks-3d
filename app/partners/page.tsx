@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Card } from "@/components/ui/Card";
 import { Network, Server, ShieldCheck, Database, Code } from "lucide-react";
+import { Subpage3D } from "@/components/ui/Subpage3D";
 
 const partners = [
   { name: "AWS", category: "Cloud Infrastructure", icon: <Server className="w-8 h-8 text-cloud-blue" /> },
@@ -19,10 +20,15 @@ const partners = [
 export default function PartnersPage() {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Fixed 3D Background */}
+      <div className="fixed inset-0 z-0 pointer-events-auto bg-slate-950">
+          <Subpage3D type="partners" />
+      </div>
+
       {/* Hero */}
-      <section className="relative pt-32 pb-24 overflow-hidden bg-dark-navy text-white">
-        <div className="absolute inset-0 bg-mesh opacity-50"></div>
-        <Container className="relative z-10 text-center">
+      <section className="relative pt-32 pb-24 overflow-hidden text-white min-h-[60vh] flex items-center z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent pointer-events-none z-0"></div>
+        <Container className="relative z-10 text-center pointer-events-auto">
           <AnimatedSection direction="up">
             <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
               Technology <span className="text-cloud-blue">Ecosystem</span>
@@ -35,7 +41,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Partners Grid */}
-      <section className="py-24 bg-accent-gray">
+      <section className="relative z-10 py-24 bg-accent-gray">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-dark-navy">Our Strategic Partners</h2>
@@ -58,7 +64,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Become a Partner */}
-      <section className="py-24 bg-white text-center">
+      <section className="relative z-10 py-24 bg-white text-center">
         <Container>
           <AnimatedSection>
             <h2 className="text-3xl font-bold text-dark-navy mb-4">Become a Partner</h2>

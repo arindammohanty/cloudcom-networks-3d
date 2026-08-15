@@ -1,16 +1,24 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
+import { Subpage3D } from '@/components/ui/Subpage3D';
 
 export default function ResourcesMainPage() {
     return (
-        <div className="animate-fade-in">
-            <section className="bg-gradient-hero border-b border-white/10 pt-16 pb-20 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-screen"></div>
-                <div className="container mx-auto px-6 max-w-7xl relative z-10">
+        <div className="flex flex-col min-h-screen">
+            {/* Fixed 3D Background */}
+            <div className="fixed inset-0 z-0 pointer-events-auto bg-slate-950">
+                <Subpage3D type="resources" />
+            </div>
+
+            <section className="border-b border-white/10 pt-32 pb-20 relative overflow-hidden min-h-[60vh] flex items-center z-10 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent pointer-events-none z-0"></div>
+                <div className="container mx-auto px-6 max-w-7xl relative z-10 pointer-events-auto">
                     <div className="flex flex-col md:flex-row items-center gap-10">
                         <div className="md:w-3/5">
-                            <div className="text-primary font-semibold text-xs mb-4">Home <i className="fa-solid fa-chevron-right text-[8px] mx-2 text-slate-500"></i> Resources</div>
-                            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Resources for Insights, <br/><span className="text-blue-400">Knowledge & Growth</span></h1>
+                            <div className="text-cloud-blue font-semibold text-xs mb-4">Home <i className="fa-solid fa-chevron-right text-[8px] mx-2 text-slate-500"></i> Resources</div>
+                            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Resources for Insights, <br/><span className="text-cloud-blue">Knowledge & Growth</span></h1>
                             <p className="text-lg text-slate-300">Stay informed with expert insights, technical resources, and industry perspectives to help you navigate the evolving world of communications, cloud, and digital infrastructure.</p>
                         </div>
                     </div>
@@ -19,7 +27,7 @@ export default function ResourcesMainPage() {
             
             <div className="h-4 bg-slateBg"></div>
 
-            <section className="py-16 bg-slateBg">
+            <section className="relative z-10 py-16 bg-slateBg">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <h2 className="text-2xl font-bold text-slate-900 mb-6">Featured Resources</h2>
                     <div className="grid md:grid-cols-3 gap-6 mb-16">

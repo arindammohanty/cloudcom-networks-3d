@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { ArrowRight, Briefcase, Users, Zap, Heart } from 'lucide-react';
+import { Subpage3D } from '@/components/ui/Subpage3D';
 
 export const metadata = {
   title: 'Careers | CloudCom',
@@ -62,10 +63,15 @@ export default function CareersPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Fixed 3D Background */}
+      <div className="fixed inset-0 z-0 pointer-events-auto bg-slate-950">
+          <Subpage3D type="careers" />
+      </div>
+
       {/* Hero Section */}
-      <section className="relative py-24 lg:py-32 bg-dark-navy text-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh opacity-50"></div>
-        <Container className="relative z-10">
+      <section className="relative py-24 lg:py-32 overflow-hidden text-white min-h-[60vh] flex items-center z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent pointer-events-none z-0"></div>
+        <Container className="relative z-10 pointer-events-auto">
           <AnimatedSection className="max-w-3xl">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">Build the Future of Enterprise Tech</h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
@@ -81,7 +87,7 @@ export default function CareersPage() {
       </section>
 
       {/* Why Join Us */}
-      <section className="py-20 lg:py-32 bg-slate-50">
+      <section className="relative z-10 py-20 lg:py-32 bg-slate-50">
         <Container>
           <AnimatedSection>
             <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center text-dark-navy">Why Join CloudCom?</h2>
@@ -102,7 +108,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section id="open-positions" className="py-20 lg:py-32 bg-white">
+      <section id="open-positions" className="relative z-10 py-20 lg:py-32 bg-white">
         <Container>
           <AnimatedSection className="mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-dark-navy mb-4">Open Positions</h2>

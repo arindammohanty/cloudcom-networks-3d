@@ -12,7 +12,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="bg-slate-900 text-slate-300 text-[11px] py-2 px-6 hidden md:block">
+            <div className={`bg-slate-900 text-slate-300 text-[11px] py-2 px-6 ${pathname === '/' ? 'hidden' : 'hidden md:block'}`}>
                 <div className="container mx-auto max-w-7xl flex justify-between items-center">
                     <div className="flex space-x-6 font-medium">
                         <span className="flex items-center"><i className="fa-solid fa-phone text-slate-500 mr-2"></i> +91 7609832555</span>

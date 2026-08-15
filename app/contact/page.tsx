@@ -143,13 +143,20 @@ Message: ${formData.message}
     );
 }
 
+import { Subpage3D } from '@/components/ui/Subpage3D';
+
 export default function ContactPage() {
     return (
-        <div className="animate-fade-in">
+        <div className="flex flex-col min-h-screen">
+            {/* Fixed 3D Background */}
+            <div className="fixed inset-0 z-0 pointer-events-auto bg-slate-950">
+                <Subpage3D type="contact" />
+            </div>
+
             {/* Hero Section */}
-            <section className="bg-gradient-hero pt-16 pb-20 relative overflow-hidden">
-                 <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1920&h=1080&q=80')] bg-cover bg-center mix-blend-screen"></div>
-                 <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center">
+            <section className="pt-32 pb-20 relative overflow-hidden min-h-[60vh] flex items-center z-10 pointer-events-none">
+                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent pointer-events-none z-0"></div>
+                 <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center pointer-events-auto">
                      <div className="text-primary font-semibold text-xs mb-4">Home <i className="fa-solid fa-chevron-right text-[8px] mx-2 text-slate-500"></i> Contact Us</div>
                      <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Let's Connect</h1>
                      <p className="text-lg text-slate-300 max-w-3xl mx-auto mb-10">We'd love to hear from you. Whether you have a question about our services, need support, or want to explore a partnership, our team is here to help.</p>

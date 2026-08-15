@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { Subpage3D } from '@/components/ui/Subpage3D';
 
 export default function SupportPortalPage() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -15,9 +16,15 @@ export default function SupportPortalPage() {
     };
 
     return (
-        <div className="animate-fade-in">
-             <section className="bg-gradient-hero border-b border-white/10 pt-16 pb-20 relative overflow-hidden">
-                <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center">
+        <div className="flex flex-col min-h-screen">
+            {/* Fixed 3D Background */}
+            <div className="fixed inset-0 z-0 pointer-events-auto bg-slate-950">
+                <Subpage3D type="support" />
+            </div>
+
+             <section className="border-b border-white/10 pt-32 pb-20 relative overflow-hidden min-h-[60vh] flex items-center z-10 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent pointer-events-none z-0"></div>
+                <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center pointer-events-auto">
                     <div className="text-primary font-semibold text-xs mb-4">Home <i className="fa-solid fa-chevron-right text-[8px] mx-2 text-slate-500"></i> Support Portal</div>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Support Portal</h1>
                     <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">Welcome! How can we help you today? Raise a request, track progress, and get the support you need.</p>
@@ -38,7 +45,7 @@ export default function SupportPortalPage() {
                 </div>
             </section>
             
-            <section className="py-16 bg-slateBg min-h-screen">
+            <section className="relative z-10 py-16 bg-slateBg min-h-screen">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <h2 className="text-xl font-bold text-slate-900 mb-6">What would you like to do?</h2>
                     <div className="grid md:grid-cols-4 gap-6 mb-12">

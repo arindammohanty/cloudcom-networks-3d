@@ -2,48 +2,44 @@ import React from 'react';
 import Link from 'next/link';
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Container } from "@/components/ui/Container";
+import { Earth3D } from "@/components/ui/Earth3D";
+import { HoverCard } from "@/components/ui/HoverCard";
 
 export default function HomePage() {
     return (
-        <div className="flex flex-col min-h-screen overflow-hidden">
-            <section className="bg-gradient-hero pt-32 pb-32 relative overflow-hidden flex items-center min-h-[90vh]">
-                <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-screen"></div>
-                <div className="absolute inset-0 bg-slate-900/40 z-0"></div>
-                <Container className="relative z-10">
-                    <AnimatedSection direction="up" delay={0.1}>
-                        <div className="text-xs font-bold text-blue-400 tracking-widest uppercase mb-6 inline-block px-4 py-1.5 rounded-full border border-blue-400/30 bg-blue-400/10 backdrop-blur-sm">
-                            Communications. Cloud. Security. Infrastructure.
-                        </div>
-                    </AnimatedSection>
-                    <div className="flex flex-col lg:flex-row items-center gap-12">
-                        <div className="lg:w-3/5">
-                            <AnimatedSection direction="up" delay={0.2}>
-                                <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight drop-shadow-lg">
-                                    Building Secure <br />
-                                    <span className="text-blue-400">Digital Infrastructure</span> <br />
-                                    for Modern Enterprises
-                                </h1>
-                            </AnimatedSection>
-                            <AnimatedSection direction="up" delay={0.3}>
-                                <p className="text-lg md:text-2xl text-slate-300 mb-10 font-light leading-relaxed max-w-2xl text-balance">
-                                    Design &bull; Build &bull; Host &bull; Secure &bull; Integrate &bull; Operate
-                                </p>
-                            </AnimatedSection>
-                            <AnimatedSection direction="up" delay={0.4}>
-                                <div className="flex flex-col sm:flex-row gap-4">
-                                    <Link href="/solutions" className="bg-primary hover:bg-primaryHover text-white px-8 py-4 rounded-md font-bold text-base transition-all text-center shadow-lg shadow-blue-500/30 hover:scale-105">Explore Solutions <i className="fa-solid fa-arrow-right ml-2"></i></Link>
-                                    <Link href="/contact" className="bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 px-8 py-4 rounded-md font-bold text-base transition-all text-center hover:scale-105">Contact Us <i className="fa-regular fa-envelope ml-2"></i></Link>
-                                </div>
-                            </AnimatedSection>
-                        </div>
-                        <div className="lg:w-2/5 relative">
-                             <AnimatedSection direction="left" delay={0.3}>
-                                 <div className="relative">
-                                     <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
-                                     <img src="/media/corporate-emblame-logo.png" alt="Cloud Com logo" className="relative w-full rounded-2xl shadow-2xl border border-white/10 opacity-90 mix-blend-screen transform transition-transform duration-700 hover:scale-[1.02]" />
-                                 </div>
-                             </AnimatedSection>
-                        </div>
+        <div className="flex flex-col min-h-screen">
+            {/* Fixed 3D Earth Background */}
+            <div className="fixed inset-0 z-0 pointer-events-auto bg-slate-950">
+                <Earth3D />
+            </div>
+
+            <section className="pt-32 pb-32 relative flex items-center min-h-[90vh] z-10 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent pointer-events-none"></div>
+                <Container className="relative pointer-events-none">
+                    <div className="flex flex-col items-start gap-12 max-w-3xl pointer-events-auto">
+                        <AnimatedSection direction="up" delay={0.1}>
+                            <div className="text-xs font-bold text-blue-400 tracking-widest uppercase mb-6 inline-block px-4 py-1.5 rounded-full border border-blue-400/30 bg-blue-400/10 backdrop-blur-sm">
+                                Communications. Cloud. Security. Infrastructure.
+                            </div>
+                        </AnimatedSection>
+                        <AnimatedSection direction="up" delay={0.2}>
+                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight drop-shadow-lg">
+                                Building Secure <br />
+                                <span className="text-blue-400">Digital Infrastructure</span> <br />
+                                for Modern Enterprises
+                            </h1>
+                        </AnimatedSection>
+                        <AnimatedSection direction="up" delay={0.3}>
+                            <p className="text-lg md:text-2xl text-slate-300 mb-10 font-light leading-relaxed text-balance">
+                                Design &bull; Build &bull; Host &bull; Secure &bull; Integrate &bull; Operate
+                            </p>
+                        </AnimatedSection>
+                        <AnimatedSection direction="up" delay={0.4}>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Link href="/solutions" className="bg-primary hover:bg-primaryHover text-white px-8 py-4 rounded-md font-bold text-base transition-all text-center shadow-lg shadow-blue-500/30 hover:scale-105">Explore Solutions <i className="fa-solid fa-arrow-right ml-2"></i></Link>
+                                <Link href="/contact" className="bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 px-8 py-4 rounded-md font-bold text-base transition-all text-center hover:scale-105">Contact Us <i className="fa-regular fa-envelope ml-2"></i></Link>
+                            </div>
+                        </AnimatedSection>
                     </div>
                 </Container>
             </section>
@@ -60,7 +56,7 @@ export default function HomePage() {
                 </Container>
             </div>
 
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-slate-50 relative z-20 shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
                 <Container>
                     <div className="text-center mb-16 max-w-3xl mx-auto">
                         <AnimatedSection>
@@ -79,8 +75,8 @@ export default function HomePage() {
                             { icon: "fa-briefcase", title: "Business Operations", desc: "BPO/KPO, workflow automation.", link: "/solutions/bpo" }
                         ].map((item, idx) => (
                             <AnimatedSection key={idx} delay={idx * 0.1} direction="up" className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)]">
-                                <Link href={item.link} className="block h-full group">
-                                    <div className="h-full bg-white p-8 rounded-2xl border border-slate-200 group-hover:border-primary/30 group-hover:shadow-xl transition-all flex flex-col items-start relative overflow-hidden">
+                                <HoverCard className="h-full bg-white border-slate-200">
+                                    <Link href={item.link} className="block h-full group p-8 flex flex-col items-start relative overflow-hidden">
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
                                         <div className="p-4 rounded-xl bg-blue-50 text-primary mb-6 relative z-10 group-hover:bg-primary group-hover:text-white transition-colors">
                                             <i className={`fa-solid ${item.icon} text-2xl`}></i>
@@ -90,28 +86,28 @@ export default function HomePage() {
                                         <span className="text-primary text-xs font-bold uppercase tracking-wider flex items-center relative z-10">
                                             Learn More <i className="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                                         </span>
-                                    </div>
-                                </Link>
+                                    </Link>
+                                </HoverCard>
                             </AnimatedSection>
                         ))}
                     </div>
                 </Container>
             </section>
 
-            <section className="py-24 bg-white border-t border-slate-100 relative overflow-hidden">
+            <section className="py-24 bg-white border-t border-slate-100 relative overflow-hidden z-20">
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('/media/mesh.svg')] bg-repeat opacity-[0.03]"></div>
                 <Container className="relative z-10">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="lg:w-1/3">
-                            <AnimatedSection direction="right">
-                                <div className="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-lg relative">
+                            <AnimatedSection direction="right" className="h-full">
+                                <HoverCard className="h-full bg-slate-50 border-slate-200 shadow-lg relative p-10 rounded-3xl">
                                     <div className="absolute -top-6 -left-6 text-6xl text-slate-200 opacity-50"><i className="fa-solid fa-quote-left"></i></div>
                                     <h2 className="text-3xl font-bold text-slate-900 mb-6">About CloudCom</h2>
                                     <p className="text-base text-slate-600 mb-8 leading-relaxed">CloudCom is an Enterprise Digital Infrastructure & Technology Operations company helping organizations modernize, secure, and operate mission-critical digital platforms.</p>
-                                    <Link href="/company" className="bg-primary hover:bg-primaryHover text-white px-6 py-3 rounded-md font-bold transition-all shadow-md inline-flex items-center">
+                                    <Link href="/company" className="bg-primary hover:bg-primaryHover text-white px-6 py-3 rounded-md font-bold transition-all shadow-md inline-flex items-center hover:scale-105">
                                         More About Us <i className="fa-solid fa-arrow-right ml-2"></i>
                                     </Link>
-                                </div>
+                                </HoverCard>
                             </AnimatedSection>
                         </div>
                         
@@ -158,8 +154,9 @@ export default function HomePage() {
                 </Container>
             </section>
 
-            <section className="py-24 bg-slate-900 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-screen"></div>
+            <section className="py-24 relative overflow-hidden z-20 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+                {/* Transparent overlay for readability */}
+                <div className="absolute inset-0 z-0 bg-slate-950/60 backdrop-blur-[2px]"></div>
                 <Container className="relative z-10">
                     <div className="text-center mb-16">
                         <AnimatedSection>
@@ -178,11 +175,13 @@ export default function HomePage() {
                             { icon: "fa-truck-fast", title: "Logistics & Transportation", slug: "logistics" },
                             { icon: "fa-landmark", title: "Government & Public Sector", slug: "government" }
                         ].map((item, idx) => (
-                            <AnimatedSection key={idx} delay={idx * 0.05} direction="up">
-                                <Link href={`/industries/${item.slug}`} className="flex flex-col items-center justify-center p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-primary hover:border-primary transition-all group cursor-pointer h-full backdrop-blur-sm">
-                                    <i className={`fa-solid ${item.icon} text-4xl text-slate-400 group-hover:text-white mb-4 transition-colors`}></i>
-                                    <span className="font-bold text-slate-300 group-hover:text-white transition-colors text-center">{item.title}</span>
-                                </Link>
+                            <AnimatedSection key={idx} delay={idx * 0.05} direction="up" className="h-full">
+                                <HoverCard className="h-full bg-white/5 border-white/10 backdrop-blur-sm">
+                                    <Link href={`/industries/${item.slug}`} className="flex flex-col items-center justify-center p-8 hover:bg-primary hover:border-primary transition-all group cursor-pointer h-full">
+                                        <i className={`fa-solid ${item.icon} text-4xl text-slate-400 group-hover:text-white mb-4 transition-colors`}></i>
+                                        <span className="font-bold text-slate-300 group-hover:text-white transition-colors text-center">{item.title}</span>
+                                    </Link>
+                                </HoverCard>
                             </AnimatedSection>
                         ))}
                     </div>

@@ -4,14 +4,20 @@ import { Container } from "@/components/ui/Container";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Card } from "@/components/ui/Card";
 import { Shield, Zap, Target, Users, Globe, Lightbulb } from "lucide-react";
+import { Subpage3D } from "@/components/ui/Subpage3D";
 
 export default function CompanyPage() {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Fixed 3D Background */}
+      <div className="fixed inset-0 z-0 pointer-events-auto bg-slate-950">
+          <Subpage3D type="company" />
+      </div>
+
       {/* Hero */}
-      <section className="relative pt-32 pb-24 overflow-hidden bg-dark-navy text-white">
-        <div className="absolute inset-0 bg-mesh opacity-50"></div>
-        <Container className="relative z-10 text-center">
+      <section className="relative pt-32 pb-24 overflow-hidden text-white min-h-[60vh] flex items-center z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent pointer-events-none z-0"></div>
+        <Container className="relative z-10 text-center pointer-events-auto">
           <AnimatedSection direction="up">
             <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
               About <span className="text-cloud-blue">CloudCom</span>
@@ -24,7 +30,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section id="vision" className="py-24 bg-white">
+      <section id="vision" className="relative z-10 py-24 bg-white">
         <Container>
           <div className="grid md:grid-cols-2 gap-12">
             <AnimatedSection direction="right">
@@ -52,7 +58,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Core Values */}
-      <section id="values" className="py-24 bg-accent-gray">
+      <section id="values" className="relative z-10 py-24 bg-accent-gray">
         <Container>
           <div className="text-center mb-16">
             <AnimatedSection>
